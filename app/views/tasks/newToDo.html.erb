@@ -1,0 +1,22 @@
+<div class="main tasks-new">
+  <div class="container">
+    <h2 class="form-heading">新規ToDo作成</h2>
+    <%= form_tag("/createToDo")do %>
+    <div class="form">
+      <div class="form-body">
+        <a>カテゴリーを選択してください</a>
+        <select name="Category">
+          <option value=”dec”>12月</option>
+        </select>
+        <br>
+        <%= link_to("カテゴリー編集", "/category/") %>
+        <br>
+        <br>
+        <a>ToDo内容を入力してください</a>
+        <textarea name="content"></textarea>
+        <input type="submit" value="作成">
+      </div>
+    </div>
+    <%end%>
+  </div>
+</div>

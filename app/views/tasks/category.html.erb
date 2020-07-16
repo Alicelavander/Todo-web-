@@ -1,0 +1,11 @@
+<div class="main tasks-new">
+  <div class="container">
+    <h1 class="form-heading">カテゴリーを編集する</h1>
+    <%=  "Category: " + @category %>
+    <div class="task-menus">
+        <%= link_to("編集", "/category/#{@category}/edit") %>
+        <%= link_to("削除(注:カテゴリー内全てのToDoが削除されます)", "/category/#{@category}/delete", {method: "post"}) %>
+    </div>
+  </div>
+</div>
+  

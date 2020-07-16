@@ -1,0 +1,25 @@
+<header>
+  <div class="header-logo">
+    ToDoアプリ
+  </div>
+  <ul class="header-menus">
+    <li>
+        <%= link_to("新規ToDo作成", "/newToDo")%>
+    </li>
+  </ul>
+</header>
+
+
+<div class="main">
+  <div>
+    <h2> ToDo一覧</h2>
+  </div>
+  <div class="container">
+    <h3>category</h3>
+    <% @tasks.each do |task| %>
+      <div class="tasks-index-item">
+        <%= link_to(task.content, "/task/#{task.id}") %>
+      </div>
+    <% end %>
+  </div>
+</div>

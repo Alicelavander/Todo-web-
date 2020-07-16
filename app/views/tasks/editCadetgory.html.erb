@@ -1,0 +1,14 @@
+<div class="main tasks-new">
+  <div class="container">
+    <h2 class="form-heading">カテゴリー名編集</h2>
+    <%= form_tag("/saveCategory") do %>
+        <div class="form">
+          <div class="form-body">
+              <a>カテゴリー名変更: 新しいカテゴリー名を入力してください</a>
+              <textarea name="category"><%= @category %></textarea>
+              <input type="submit" value="保存">
+          </div>
+        </div>
+      <% end %>
+  </div>
+</div>

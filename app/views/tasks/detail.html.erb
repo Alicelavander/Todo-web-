@@ -1,0 +1,16 @@
+<div class="main tasks-show">
+  <div class="container">
+    <div class="tasks-show-item">
+      <p>
+        <%= Task.content %>
+      </p>
+      <div class="task-time">
+        #<%=  "Category: " + @task.category %>
+      </div>
+      <div class="task-menus">
+        <%= link_to("カテゴリー編集", "/category/#{@task.category}") %>
+        <%= link_to("削除", "/task/#{@task.id}/delete", {method: "post"}) %>
+      </div>
+    </div>
+  </div>
+</div>
