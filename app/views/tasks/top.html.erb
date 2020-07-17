@@ -15,7 +15,6 @@
     <h2> ToDo一覧</h2>
   </div>
   <div class="container">
-    <h3>category</h3>
     <% @tasks.each do |task| %>
       <div class="tasks-index-item">
         <%= link_to(task.content, "/task/#{task.id}") %>
